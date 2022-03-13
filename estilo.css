@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+.padre{
+    width: 90%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: repeat(3 1fr);
+    grid-template-areas: 
+        "prodserv header aside"
+        "prodserv extras extras"
+        "footer footer footer";
+    gap: 10px;
+    color: white;
+    background-color: rgb(255, 238, 7);
+    text-align: center;
+}
+.hijo{
+    margin: 10px;
+    padding: 30px;
+}
+.header{
+    background-color: blue;
+    grid-area: header;
+}
+.prodserv{
+    background-color: blueviolet;
+    grid-area: prodserv;
+}
+.extras{
+    background-color: dimgrey;
+    grid-area: extras;
+}
+.aside{
+    background-color: red;
+    grid-area: aside;
+}
+.footer{
+    background-color: green;
+    grid-area: footer;
+}
